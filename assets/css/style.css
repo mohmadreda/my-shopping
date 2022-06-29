@@ -1,0 +1,157 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+   
+}
+:root{
+    --color:#782299;
+}
+body, .navbar{
+    overflow-x: hidden;
+}
+a{
+    transition: .3s;
+    text-decoration: none;
+}
+input:focus{
+    outline: none;
+}
+a:not(.nav-link):hover{
+    color: white !important;
+    background-color: var(--color);
+}
+
+/* main color */
+.pink{
+    color: var(--color);
+}
+.opacity{
+    opacity: .5;
+}
+.transparent{
+    background-color: transparent;
+}
+.b-pink{
+border-color: var(--color)!important ;
+}
+.color-on-hover:hover{
+    color: var(--color);
+    cursor: pointer;
+}
+.bg-pink{
+background-color: var(--color)!important ;
+}
+.black{
+    color: #000;
+}
+.bg-eee{
+    background-color: #eee;
+}
+/* end main color */
+/* class to add shadow */
+.p-shadow{
+    box-shadow: 0 0 8px 0px var(--color);
+}
+.shadow-on-hover:hover{
+    box-shadow: 0 0 15px 0px var(--color);
+}
+.pointer{
+    cursor: pointer;
+}
+/* class to determine minimum width */
+.min-400{
+min-width: 400px;
+}
+/* class to dertermine z-index */
+.z-index{
+    z-index: 10000;
+}
+/* class to determine transition */
+.transition{
+    transition: all .3s;
+    transform-origin: right;
+}
+/* class to determine border radius */
+.rounded-4{
+    border-radius: 4rem;
+}
+/* class to hide cart % login */
+.hide-r{
+    right: -110%;
+}
+/* class to determine max-height  */
+@media (max-width:991px) {
+    
+.max-h-200{
+    max-height: 200px;
+}
+}
+/* class to determine max-width  */
+@media (max-width:450px) {
+    .w-xs-100{
+        width: 100%;
+        min-width: auto!important;
+    }
+}
+
+/* start navbar */
+.box .image{
+    width: 100px;
+    height: 100px;
+}
+ul.icons li{
+    display: block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+}
+.nav-link:hover{
+    color: var(--color);
+}
+/* end navbar */
+/* start discount */
+.discount .container .row::before{
+content: "";
+position: absolute;
+clip-path: polygon(0 0, 59% 0, 36% 100%, 0 100%);
+background-color: var(--color);
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+opacity: .4;
+}
+@media (max-width:991px) {
+    .discount .container .row::before{
+        clip-path: polygon(0 0, 100% 0, 0% 100%);
+    }
+}
+/* end disount */
+/* start arrivals */
+.swiper-slide{
+    max-width: 300px;
+    min-height: 300px;
+    background-color: #fff;
+}
+.arrivals::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color);
+    opacity: .5;
+    z-index: -1;
+}
+.arrivals .box:hover span:last-child{
+    right: 0 !important;
+}
+/* end arrivals */
+/* start subscribe */
+.subscribe{
+    background-color: #eee;
+}
+/* end subscribe */

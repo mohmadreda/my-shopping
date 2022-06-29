@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- web fonts -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- swiper js -->
+    <!-- my styling -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+</head>
+<body class="position-relative">
+    <!-- start navbar -->
+    <nav class="navbar navbar-expand-lg bg-light sticky-top top-0  start-0 w-100 p-shadow">
+        
+        <div class="container">
+          <a class="navbar-brand pink" href="index.html">
+            <i class="fas fa-gift"></i>
+            <span>MY-shopping</span>
+          </a>
+          <div class="icons d-flex align-items-center pink order-lg-4">
+            <i class="far fa-user fs-5" id="user"></i>
+            <i class="fas fa-shopping-cart fs-5 ms-3" id="shopping"></i>
+            <i class="d-lg-none fas fa-bars fs-5 ms-3 text-align-center" id="bars"  data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"></i>
+          </div>
+          <div class="navbar-collapse justify-content-center position-relative " id="navbarNav">
+            <ul class="navbar-nav d-lg-flex d-none">
+              <li class="nav-item">
+                <a class="nav-link active black" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link black" href="shop.html">shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link black" href="cart.html">cart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link black" href="blog.html">blogs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link black" href="faq.html">faq</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link black" href="contact.html">contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <!-- end navbar-->
+    <!-- start cart -->
+    <div class="my-cart overflow-hidden transition bg-light mw-400 w-xs-100 position-fixed p-shadow top-0 hide-r p-5 z-index vh-100">
+        <i class="fas fa-times position-absolute end-0 me-3 fs-3 pink"></i>
+        <h2 class="mb-4 text-center pink">my cart</h2>
+        <div class="boxes">
+            <div class="box d-flex align-items-center gap-3 mb-3">
+                <div class="image">
+                    <img class="img-fluid bg-white" src="assets/img/cart-1.png" alt="">
+                </div>
+                <div class="text">
+                    <p class="fs-5">new winter coat</p>
+                    <p class="pink fs-6">$12</p>
+                    <ul class="list-unstyled d-flex gap-3 icons">
+                        <li class="bg-white">+</li>
+                        <li class="bg-white">1</li>
+                        <li class="bg-white">-</li>
+                        <li class="pink"><i class="fas fa-trash-alt"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box d-flex align-items-center gap-3 mb-3">
+                <div class="image">
+                    <img class="img-fluid bg-white" src="assets/img/cart-2.png" alt="">
+                </div>
+                <div class="text">
+                    <p class="fs-5">new winter coat</p>
+                    <p class="pink fs-6">$12</p>
+                    <ul class="list-unstyled d-flex gap-3 icons">
+                        <li class="bg-white">+</li>
+                        <li class="bg-white">1</li>
+                        <li class="bg-white">-</li>
+                        <li class="pink"><i class="fas fa-trash-alt"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box d-flex align-items-center gap-3 mb-3">
+                <div class="image">
+                    <img class="img-fluid bg-white" src="assets/img/cart-3.png" alt="">
+                </div>
+                <div class="text">
+                    <p class="fs-5">new winter coat</p>
+                    <p class="pink fs-6">$12</p>
+                    <ul class="list-unstyled d-flex gap-3 icons">
+                        <li class="bg-white">+</li>
+                        <li class="bg-white">1</li>
+                        <li class="bg-white">-</li>
+                        <li class="pink"><i class="fas fa-trash-alt"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex justify-content-around">
+                <p class="pink fw-bold">3 item</p>
+                <p class="pink fw-bold">$ 28</p>
+            </div>
+        </div>
+    </div>
+    <!-- end cart -->
+    <!-- start login -->
+    <div class="login transition bg-light min-400 w-xs-100 position-fixed hide-r top-0 p-3 z-index p-shadow vh-100">
+        <i class="fas fa-times position-absolute end-0 me-3 fs-3 pink"></i>
+        <h2 class="text-center mt-5 pink">LOGIN</h2>
+        <div class="w-100 bg-white text-start my-5 w-100">
+            <p class="p-2 mb-0 pink border-bottom b-pink ">Email</p>
+            <input class="border-0 p-2" type="email" placeholder="enter your email">
+        </div>
+        <div class="w-100 bg-white text-start my-5 w-100">
+            <p class="p-2 mb-0 pink border-bottom b-pink ">Password</p>
+            <input class="border-0 p-2" type="password" placeholder="enter your password">
+        </div>
+        <input class="bg-pink border-0 px-3 py-2 d-block rounded-3 text-white mx-auto" value="submit" type="submit">
+        <div>not a member?<span class="ms-2 mt-4 d-inline-block pink">sign up here</span></div>
+    </div>
+    <!-- end login -->
+    <!-- start landing pages -->
+    <section class="landing py-2 ">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-color="#BA2C44">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="image slide text-center">
+                            <img class="img-fluid" src="assets/img/details-2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="text text-uppercase mt-4 text-center text-lg-start">
+                            <h3 class="">#1 trending item</h3>
+                            <h1 class="display-2 fw-bold pink mb-4">orginal is<br> never<br> finished!!</h1>
+                            <p class="text-black-50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non laudantium nam velit quae ipsum adipisci sequi qui reprehenderit, culpa dolore, quidem odit, ducimus sed ea modi exercitationem aliquam eum nemo!</p>
+                        </div>
+                        <div class="mt-lg-5 mt-3 d-flex justify-content-around align-items-center">
+                            <a class="p-3 b-pink pink border border-3 rounded-pill" href="details.html">view details <i class="fas pink fa-arrow-right"></i></a>
+                            <a class="p-3 b-pink pink border  border-3 rounded-pill" href="shop.html">buy now</a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item" data-color="#758202">
+                <div class="row">
+                  <div class="col-lg-5">
+                      <div class="image slide text-center">
+                          <img class="img-fluid" src="assets/img/slide-2.png" alt="">
+                      </div>
+                  </div>
+                  <div class="col-lg-5">
+                      <div class="text text-uppercase mt-4 text-center text-lg-start">
+                          <h3 class="">#1 trending item</h3>
+                          <h1 class="display-2 fw-bold pink mb-4">orginal is<br> never<br> finished!!</h1>
+                          <p class="text-black-50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non laudantium nam velit quae ipsum adipisci sequi qui reprehenderit, culpa dolore, quidem odit, ducimus sed ea modi exercitationem aliquam eum nemo!</p>
+                      </div>
+                      <div class="mt-lg-5 mt-3 d-flex justify-content-around align-items-center">
+                          <a class="p-3 b-pink pink border border-3 rounded-pill" href="details.html">view details <i class="fas pink fa-arrow-right"></i></a>
+                          <a class="p-3 b-pink pink border  border-3 rounded-pill" href="shop.html">buy now</a>
+                      </div>
+                  </div>
+              </div>
+              </div>
+              <div class="carousel-item" data-color="#782299">
+                <div class="row">
+                  <div class="col-lg-5">
+                      <div class="image slide text-center">
+                          <img class="img-fluid" src="assets/img/slide-3.png" alt="">
+                      </div>
+                  </div>
+                  <div class="col-lg-5">
+                      <div class="text text-uppercase mt-4 text-center text-lg-start">
+                          <h3 class="">#1 trending item</h3>
+                          <h1 class="display-2 fw-bold pink mb-4">orginal is<br> never<br> finished!!</h1>
+                          <p class="text-black-50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non laudantium nam velit quae ipsum adipisci sequi qui reprehenderit, culpa dolore, quidem odit, ducimus sed ea modi exercitationem aliquam eum nemo!</p>
+                      </div>
+                      <div class="mt-lg-5 mt-3 d-flex justify-content-around align-items-center">
+                          <a class="p-3 b-pink pink border border-3 rounded-pill" href="details.html">view details <i class="fas pink fa-arrow-right"></i></a>
+                          <a class="p-3 b-pink pink border  border-3 rounded-pill" href="shop.html">buy now</a>
+                      </div>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+    </section>
+    <!-- end landing pages -->
+    <!-- start discount page -->
+    <section class="discount bg-light mt-4 py-5">
+        <div class="container">
+        <div class="row position-relative overflow-hidden align-items-center justify-content-center rounded-4 py-5 bg-white">
+            <div class="col-lg-3">
+                <div class="image text-center">
+                    <img  class="max-h-200 position-relative img-fluid" src="assets/img/discount.png" alt="" srcset="">
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="text-center">
+                    <h2>50% discount</h2>
+                    <h2 class="mb-5">on new products</h2>
+                    <a class="p-3 b-pink pink border border-3 rounded-pill" href="">go to the new</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- end discount page -->
+    <!-- start arrival -->
+    <section class="arrivals overflow-hidden mt-5  py-5 position-relative w-100 d-flex justify-content-center align-items-center">
+        <div class="swiper-container container overflow-hidden py-5 ">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="box position-relative p-3 text-center overflow-hidden transparent">
+                        <span class="position-absolute pointer text-white d-inline-block p-2 bg-pink pointer">new</span>
+                        <img class="img-fluid" src="assets/img/new-1.png" alt="">
+                        <div class="text">
+                            <h2 class="pink">windbreaker jacket</h2>
+                            <p class="m-0 text-black-50">accessoties</p>
+                            <p class="m-0">$15.00<span class="ms-1 pink text-decoration-line-through">$20.00</span></p>
+                        </div>
+                        <span class="position-absolute pointer transition bottom-0 hide-r me-1 mb-1 text-white d-inline-block p-3 cursor bg-pink"><i class="fas fa-shopping-cart"></i></span>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box position-relative p-3 text-center overflow-hidden transparent">
+                        <span class="position-absolute pointer text-white d-inline-block p-2 bg-pink">new</span>
+                        <img class="img-fluid" src="assets/img/new-2.png" alt="">
+                        <div class="text">
+                            <h2 class="pink">windbreaker jacket</h2>
+                            <p class="m-0 text-black-50">accessoties</p>
+                            <p class="m-0">$15.00<span class="ms-1 pink text-decoration-line-through">$20.00</span></p>
+                            <span class="position-absolute pointer transition bottom-0 hide-r me-1 mb-1 text-white d-inline-block p-3 cursor bg-pink"><i class="fas fa-shopping-cart"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box position-relative p-3 text-center transparent overflow-hidden">
+                        <span class="position-absolute pointer text-white d-inline-block p-2 bg-pink">new</span>
+                        <img class="img-fluid" src="assets/img/new-3.png" alt="">
+                        <div class="text">
+                            <h2 class="pink">windbreaker jacket</h2>
+                            <p class="m-0 text-black-50">accessoties</p>
+                            <p class="m-0">$15.00<span class="ms-1 pink text-decoration-line-through">$20.00</span></p>
+                            <span class="position-absolute pointer transition bottom-0 hide-r me-1 mb-1 text-white d-inline-block p-3 cursor bg-pink"><i class="fas fa-shopping-cart"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box position-relative pointer p-3 text-center overflow-hidden transparent">
+                        <span class="position-absolute text-white d-inline-block p-2 bg-pink">new</span>
+                        <img class="img-fluid" src="assets/img/new-4.png" alt="">
+                        <div class="text">
+                            <h2 class="pink">windbreaker jacket</h2>
+                            <p class="m-0 text-black-50">accessoties</p>
+                            <p class="m-0">$15.00<span class="ms-1 pink text-decoration-line-through">$20.00</span></p>
+                            <span class="position-absolute transition pointer bottom-0 hide-r me-1 mb-1 text-white d-inline-block p-3 cursor bg-pink"><i class="fas fa-shopping-cart"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box position-relative p-3 text-center transparent overflow-hidden">
+                        <span class="position-absolute pointer text-white d-inline-block p-2 bg-pink">new</span>
+                        <img class="img-fluid" src="assets/img/new-5.png" alt="">
+                        <div class="text">
+                            <h2 class="pink">windbreaker jacket</h2>
+                            <p class="m-0 text-black-50">accessoties</p>
+                            <p class="m-0">$15.00<span class="ms-1 pink text-decoration-line-through">$20.00</span></p>
+                            <span class="position-absolute transition pointer bottom-0 hide-r me-1 mb-1 text-white d-inline-block p-3 cursor bg-pink"><i class="fas fa-shopping-cart"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="box position-relative p-3 text-center transparent overflow-hidden">
+                        <span class="position-absolute pointer text-white d-inline-block p-2 bg-pink">new</span>
+                        <img class="img-fluid" src="assets/img/new-6.png" alt="">
+                        <div class="text">
+                            <h2 class="pink">windbreaker jacket</h2>
+                            <p class="m-0 text-black-50">accessoties</p>
+                            <p class="m-0">$15.00<span class="ms-1 pink text-decoration-line-through">$20.00</span></p>
+                            <span class="position-absolute transition pointer bottom-0 hide-r me-1 mb-1 text-white d-inline-block p-3 cursor bg-pink"><i class="fas fa-shopping-cart"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end arrivals -->
+    <!-- start order -->
+    <section class="order py-5">
+        <div class="container text-center">
+            <h2 class="pink">how to order products from</h2>
+            <h2 class="text-uppercase pink"> my-shopping</h2>
+            <div class="row mt-3 gy-3">
+                <div class="col-md-6 col-lg-4">
+                    <div class="bg-eee p-4 rounded transition shadow-on-hover">
+                        <span class="p-3 bg-pink fs-4 text-white d-inline-block">01</span>
+                        <h3 class="mt-3">choose products</h3>
+                        <p>we have several varites<br> broducts you can choose<br> from</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="bg-eee p-4 shadow-on-hover transition">
+                        <span class="p-3 bg-pink fs-4 text-white d-inline-block">01</span>
+                        <h3 class="mt-3">choose products</h3>
+                        <p>we have several varites<br> broducts you can choose<br> from</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="bg-eee p-4 shadow-on-hover transition">
+                        <span class="p-3 bg-pink fs-4 text-white d-inline-block">01</span>
+                        <h3 class="mt-3">choose products</h3>
+                        <p>we have several varites<br> broducts you can choose<br> from</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end order -->
+    <!-- star subscripe -->
+    <section class="subscribe text-center pt-5">
+        <div class="container">
+            <div class="row align-items-center gy-5">
+             <div class="col-lg-5">
+                    <div class="text-center">
+                        <h2 class="text-uppercase pink display-5 fw-bold">our news letter</h2>
+                        <p class="fw-bold fs-3">promotion new products and sales deirectly <br> to your inbox</p>
+                        <div class="position-relative overflow-hidden">
+                            <input class="w-100 py-3" type="text">
+                            <input class="position-absolute px-3 px-xs-1 h-100 text-uppercase top-0 bg-pink border-0 text-white end-0" type="submit" value="subscribe">
+                        </div>
+                    </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="image">
+                    <img class="img-fluid" src="assets/img/PngItem_5095414.png" alt="">
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!-- end sybscripe -->
+    <!-- start footer -->
+    <footer class="pt-5">
+        <div class="container">
+            <div class="row text-center text-md-start gy-3 ">
+                <div class="col-lg-3 col-md-6">
+                    <ul class="list-unstyled d-flex flex-column hustify-content-between gap-3">
+                        <li class="pink fw-bold fs-4"> <i class="fas fa-gift"></i>
+                            <span>MY-shopping</span>
+                        </li>
+                        <li>enjoy the biggest sell in your lige</li>
+                        <li class="d-flex gap-3 fs-2 justify-content-center  justify-content-md-start">
+                            <i class="fab fa-facebook-f color-on-hover"></i>
+                            <i class="fab fa-twitter color-on-hover"></i>
+                            <i class="fab fa-instagram color-on-hover"></i>
+                            <i class="fab fa-youtube color-on-hover"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <ul class="list-unstyled d-flex flex-column hustify-content-between gap-3"> 
+                      <li class="fw-bold fs-4 pink">about</li>
+                      <li>about us</li>
+                      <li>customer support</li>
+                      <li>support center</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <ul class="list-unstyled d-flex flex-column hustify-content-between gap-3"> 
+                      <li class="fw-bold fs-4 pink">our services</li>
+                      <li>shop</li>
+                      <li>discounts</li>
+                      <li>shopping mode</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <ul class="list-unstyled d-flex flex-column hustify-content-between gap-3"> 
+                      <li class="fw-bold fs-4 pink">our company</li>
+                      <li>about us</li>
+                      <li>register</li>
+                      <li>contact us</li>
+                    </ul>
+                </div>
+              
+            </div>
+            <h4 class="my-1 text-center">&copy; all rights reserved created by <span class="pink">MODY</span></h4>
+        </div>
+    </footer>
+    <!-- end footer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
